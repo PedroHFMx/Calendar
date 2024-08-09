@@ -8,7 +8,7 @@ def calendar(year: int, month: int):
     leap_year_quantity_modified = (selected_year - 2021) // 4
     leap_year_quantity = (selected_year - 2020) // 4
 
-    is_bissexto = selected_year % 4 == 0
+    is_leap_year = selected_year % 4 == 0
 
     week_days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 
@@ -21,7 +21,7 @@ def calendar(year: int, month: int):
         days_of_the_month = 32
         start_index = start_day_calc_modified % len(week_days)
     elif selected_month == 2:
-        days_of_the_month = 30 if is_bissexto else 29
+        days_of_the_month = 30 if is_leap_year else 29
         start_index = (start_day_calc_modified - 4) % len(week_days)
     elif selected_month == 3:
         days_of_the_month = 32
@@ -70,7 +70,7 @@ def calendar(year: int, month: int):
 
     # print(f'Leap Year Quantity: {leap_year_quantity} | ', f'Is Leap Year?: {is_bissexto} | ',
     #       f'Year selected: {selected_year} | ', f'Init day: {start_index} | ',
-    #       f'Month selected: {selected_month}')
+    #       f'Month selected: {selected_month}'
     # print(month_and_week_days)
 
     return month_and_week_days
