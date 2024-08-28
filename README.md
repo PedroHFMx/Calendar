@@ -1,4 +1,4 @@
-This is a Python calendar code to get all days in the Month based on the Year selected
+This is a Python calendar code to get all days in a Month, based on the Year selected
 
 Call the function calendar() and pass the year and the month by parameters like this: calendar(2030, 7)
 
